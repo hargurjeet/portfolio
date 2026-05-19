@@ -53,6 +53,22 @@ const projects = [
     githubUrl: "https://github.com/hargurjeet/local_slm_experiments",
     liveUrl: "https://dev.to/gurjeet333/running-llms-locally-a-rigorous-benchmark-of-phi-3-mistral-and-llama-32-on-ollama-2289",
   },
+  {
+    title: "Generic Database MCP Server",
+    description: [
+      "**Zero hardcoding** — connects to any DuckDB file and auto-discovers every table and column at runtime",
+      "**Type-aware quality checks**: numeric columns get distribution stats + Z-score; VARCHAR gets cardinality; TIMESTAMP gets gap detection",
+      "**Ollama ReAct loop** (llama3.2) iteratively calls MCP tools, drills into anomalies, and writes a plain-English RCA report",
+      "**FastAPI REST layer** exposes drag-and-drop file upload, per-table quality checks, and RCA generation as HTTP endpoints",
+      "**Next.js dashboard** visualises schema, null rates, distribution cards, and cardinality in a 3-step upload → inspect → report flow",
+    ],
+    outcome:
+      "Pass any DuckDB file and get a full data-quality report + LLM-written root cause analysis in seconds — no config, no hardcoded schema.",
+    tags: ["FastMCP", "DuckDB", "Ollama", "llama3.2", "FastAPI", "Next.js", "Recharts", "Python"],
+    badge: "Open Source",
+    githubUrl: "https://github.com/hargurjeet/database-mcp",
+    liveUrl: "https://github.com/hargurjeet/database-mcp",
+  },
 ];
 
 function parseBold(text: string) {
