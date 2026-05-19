@@ -18,6 +18,17 @@ const projects = [
     liveUrl: "https://huggingface.co/spaces/Hargurjeet/hybrid-rag-nextjs",
   },
   {
+    title: "AI-Powered Resume Parser",
+    description:
+      "Upload a PDF resume → pdfplumber extracts the text → Llama 3.3 70B on Fireworks AI parses it into structured JSON via the instructor library. A split-view Next.js UI shows the original PDF alongside parsed data: experience timeline, color-coded skill tags, education cards, and a one-click JSON export.",
+    outcome:
+      "Live on Fly.io; structured output enforced with Pydantic v2 and instructor so the API never returns malformed JSON. Dark/light mode, drag-and-drop upload, animated progress steps.",
+    tags: ["FastAPI", "Next.js", "Llama 3.3 70B", "Fireworks AI", "pdfplumber", "Pydantic", "Fly.io"],
+    badge: "Live App",
+    githubUrl: "https://github.com/hargurjeet/resume-parser",
+    liveUrl: "https://hargurjeet-resume-ui.fly.dev",
+  },
+  {
     title: "Local AI Assistant using Ollama",
     description:
       "On-device inference assistant running Phi-3 Mini, Mistral 7B, and LLaMA 3.2 via Ollama — wrapped in a FastAPI backend for fully offline operation. Built for production reliability with structured JSON outputs and graceful failure handling.",
