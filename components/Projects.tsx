@@ -9,11 +9,11 @@ const projects = [
   {
     title: "Production-Grade RAG Evaluation Pipeline",
     description: [
-      "Hybrid retrieval — BM25 sparse + contextual dense search — fed through a Cohere reranker",
-      "Citation enforcement grounds every answer in source documents",
-      "Prompts version-controlled in a config file for full reproducibility",
-      "Offline RAGAS script measures faithfulness, answer relevancy, and context precision",
-      "GitHub Actions gate runs eval on every PR; merge blocked if any metric drops below threshold",
+      "**Hybrid retrieval** — BM25 sparse + contextual dense search — fed through a **Cohere reranker**",
+      "**Citation enforcement** grounds every answer in source documents; no hallucinated references",
+      "Prompts **version-controlled** in a config file — every change is tracked and reproducible",
+      "Offline **RAGAS** script measures faithfulness, answer relevancy, and context precision",
+      "**GitHub Actions gate** runs eval on every PR; merge blocked if any metric drops below threshold",
     ],
     outcome:
       "Quality regressions caught at PR stage, not in production. Stack: LangChain/LangGraph, Chroma vector store, Cohere reranker — every retrieval step traceable, every prompt change auditable.",
@@ -25,13 +25,14 @@ const projects = [
   {
     title: "AI-Powered Resume Parser",
     description: [
-      "Drag-and-drop PDF upload → pdfplumber extracts text → Llama 3.3 70B parses into structured JSON",
-      "Split-view UI: original PDF alongside parsed experience timeline, color-coded skills, and education cards",
-      "Pydantic v2 + instructor enforce structured output — API never returns malformed JSON",
-      "One-click JSON export, dark/light mode toggle, animated progress steps",
+      "PDF → structured JSON pipeline: pdfplumber extracts text → **Llama 3.3 70B** parses via Fireworks AI",
+      "**JSON schema enforcement**: instructor library constrains LLM output to an exact **Pydantic v2** model",
+      "**Retry mechanism**: catches invalid outputs, re-prompts the LLM once, then fails gracefully — no silent errors",
+      "Split-view UI: original PDF alongside **experience timeline**, color-coded skill tags, and education cards",
+      "One-click JSON export, dark/light mode, drag-and-drop upload with animated progress steps",
     ],
     outcome:
-      "Live on Fly.io. Structured output guaranteed at the schema level — zero post-processing hacks needed.",
+      "Live on Fly.io. **Structured output guaranteed at the schema level** — retry logic and graceful failure handle the edge cases that plain prompting misses.",
     tags: ["FastAPI", "Next.js", "Llama 3.3 70B", "Fireworks AI", "pdfplumber", "Pydantic", "Fly.io"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/resume-parser",
@@ -40,7 +41,7 @@ const projects = [
   {
     title: "Local AI Assistant using Ollama",
     description: [
-      "Runs Phi-3 Mini, Mistral 7B, and LLaMA 3.2 fully on-device via Ollama — no cloud calls",
+      "Runs **Phi-3 Mini**, **Mistral 7B**, and **LLaMA 3.2** fully on-device via Ollama — no cloud calls",
       "FastAPI backend for offline operation with structured JSON outputs",
       "Pydantic validation and retry logic ensure consistent, well-formed responses",
       "Benchmarked all three models across speed, accuracy, and resource trade-offs",
@@ -53,6 +54,15 @@ const projects = [
     liveUrl: "https://dev.to/gurjeet333/running-llms-locally-a-rigorous-benchmark-of-phi-3-mistral-and-llama-32-on-ollama-2289",
   },
 ];
+
+function parseBold(text: string) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1
+      ? <strong key={i} className="text-foreground font-semibold">{part}</strong>
+      : part
+  );
+}
 
 export default function Projects() {
   const ref = useRef(null);
@@ -104,7 +114,7 @@ export default function Projects() {
                 {project.description.map((point, idx) => (
                   <li key={idx} className="flex gap-2">
                     <span className="text-primary shrink-0 mt-0.5">›</span>
-                    <span className="leading-relaxed">{point}</span>
+                    <span className="leading-relaxed">{parseBold(point)}</span>
                   </li>
                 ))}
               </ul>
@@ -112,7 +122,7 @@ export default function Projects() {
               <div className="bg-primary/5 border border-primary/15 rounded-lg p-3 mb-4">
                 <p className="text-primary text-xs leading-relaxed">
                   <span className="font-semibold">Outcome: </span>
-                  {project.outcome}
+                  {parseBold(project.outcome)}
                 </p>
               </div>
 
