@@ -8,21 +8,30 @@ import { GitHubIcon } from "@/components/Icons";
 const projects = [
   {
     title: "Production-Grade RAG Evaluation Pipeline",
-    description:
-      "A hybrid RAG system combining BM25 sparse search, vector search, and a reranker — with automated evaluation using RAGAS. GitHub Actions CI/CD gates auto-run evaluations on every PR; merges are blocked if faithfulness or relevancy drop below defined thresholds.",
+    description: [
+      "Hybrid retrieval — BM25 sparse + contextual dense search — fed through a Cohere reranker",
+      "Citation enforcement grounds every answer in source documents",
+      "Prompts version-controlled in a config file for full reproducibility",
+      "Offline RAGAS script measures faithfulness, answer relevancy, and context precision",
+      "GitHub Actions gate runs eval on every PR; merge blocked if any metric drops below threshold",
+    ],
     outcome:
-      "End-to-end observability via Langfuse: p50/p90 latency tracking, token usage, and distributed tracing to debug retrieval quality.",
-    tags: ["RAG", "RAGAS", "BM25", "GitHub Actions", "Langfuse", "LangChain", "Python"],
+      "Quality regressions caught at PR stage, not in production. Stack: LangChain/LangGraph, Chroma vector store, Cohere reranker — every retrieval step traceable, every prompt change auditable.",
+    tags: ["RAG", "RAGAS", "BM25", "LangChain", "LangGraph", "Cohere Reranker", "Chroma", "GitHub Actions", "Python"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/hybrid-rag",
     liveUrl: "https://huggingface.co/spaces/Hargurjeet/hybrid-rag-nextjs",
   },
   {
     title: "AI-Powered Resume Parser",
-    description:
-      "Upload a PDF resume → pdfplumber extracts the text → Llama 3.3 70B on Fireworks AI parses it into structured JSON via the instructor library. A split-view Next.js UI shows the original PDF alongside parsed data: experience timeline, color-coded skill tags, education cards, and a one-click JSON export.",
+    description: [
+      "Drag-and-drop PDF upload → pdfplumber extracts text → Llama 3.3 70B parses into structured JSON",
+      "Split-view UI: original PDF alongside parsed experience timeline, color-coded skills, and education cards",
+      "Pydantic v2 + instructor enforce structured output — API never returns malformed JSON",
+      "One-click JSON export, dark/light mode toggle, animated progress steps",
+    ],
     outcome:
-      "Live on Fly.io; structured output enforced with Pydantic v2 and instructor so the API never returns malformed JSON. Dark/light mode, drag-and-drop upload, animated progress steps.",
+      "Live on Fly.io. Structured output guaranteed at the schema level — zero post-processing hacks needed.",
     tags: ["FastAPI", "Next.js", "Llama 3.3 70B", "Fireworks AI", "pdfplumber", "Pydantic", "Fly.io"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/resume-parser",
@@ -30,10 +39,14 @@ const projects = [
   },
   {
     title: "Local AI Assistant using Ollama",
-    description:
-      "On-device inference assistant running Phi-3 Mini, Mistral 7B, and LLaMA 3.2 via Ollama — wrapped in a FastAPI backend for fully offline operation. Built for production reliability with structured JSON outputs and graceful failure handling.",
+    description: [
+      "Runs Phi-3 Mini, Mistral 7B, and LLaMA 3.2 fully on-device via Ollama — no cloud calls",
+      "FastAPI backend for offline operation with structured JSON outputs",
+      "Pydantic validation and retry logic ensure consistent, well-formed responses",
+      "Benchmarked all three models across speed, accuracy, and resource trade-offs",
+    ],
     outcome:
-      "Benchmarked model performance across local inference trade-offs; Pydantic validation and retry logic ensure consistent, structured responses.",
+      "Rigorous benchmark published on Dev.to — documented which model wins for which use case on consumer hardware.",
     tags: ["Ollama", "FastAPI", "LLaMA 3.2", "Mistral 7B", "Phi-3", "Pydantic", "Python"],
     badge: "Open Source",
     githubUrl: "https://github.com/hargurjeet/local_slm_experiments",
@@ -87,9 +100,14 @@ export default function Projects() {
               <h3 className="text-lg font-bold text-foreground mb-3">
                 {project.title}
               </h3>
-              <p className="text-muted-foreground text-sm mb-4 flex-1 leading-relaxed">
-                {project.description}
-              </p>
+              <ul className="text-muted-foreground text-sm mb-4 flex-1 space-y-1.5">
+                {project.description.map((point, idx) => (
+                  <li key={idx} className="flex gap-2">
+                    <span className="text-primary shrink-0 mt-0.5">›</span>
+                    <span className="leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
 
               <div className="bg-primary/5 border border-primary/15 rounded-lg p-3 mb-4">
                 <p className="text-primary text-xs leading-relaxed">
