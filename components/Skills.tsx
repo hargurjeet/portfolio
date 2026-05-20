@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { BrainCircuit, Code2, Cog, Cloud, Database } from "lucide-react";
+import { BrainCircuit, Code2, Cog, Cloud, Database, Bot } from "lucide-react";
 
 const skillGroups = [
   {
@@ -50,6 +50,15 @@ const skillGroups = [
       "scikit-learn", "BERT", "PySpark", "SQL",
     ],
   },
+  {
+    category: "Agentic Coding Tools",
+    color: "violet",
+    icon: Bot,
+    skills: [
+      "Cursor", "Claude Code", "Kiro", "Amazon Q Developer",
+      "VS Code", "GitHub Copilot",
+    ],
+  },
 ];
 
 const colorMap: Record<string, string> = {
@@ -58,6 +67,7 @@ const colorMap: Record<string, string> = {
   cyan:    "bg-cyan-50   dark:bg-cyan-900/20   border border-cyan-200   dark:border-cyan-500/30   text-cyan-700   dark:text-cyan-300",
   orange:  "bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-500/30 text-orange-700 dark:text-orange-300",
   emerald: "bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300",
+  violet:  "bg-violet-50  dark:bg-violet-900/20  border border-violet-200  dark:border-violet-500/30  text-violet-700  dark:text-violet-300",
 };
 
 const iconBgMap: Record<string, string> = {
@@ -66,6 +76,7 @@ const iconBgMap: Record<string, string> = {
   cyan:    "bg-cyan-50   dark:bg-cyan-900/30   text-cyan-600   dark:text-cyan-400",
   orange:  "bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400",
   emerald: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400",
+  violet:  "bg-violet-50  dark:bg-violet-900/30  text-violet-600  dark:text-violet-400",
 };
 
 const headerMap: Record<string, string> = {
@@ -74,6 +85,7 @@ const headerMap: Record<string, string> = {
   cyan:    "text-cyan-600   dark:text-cyan-400",
   orange:  "text-orange-600 dark:text-orange-400",
   emerald: "text-emerald-600 dark:text-emerald-400",
+  violet:  "text-violet-600  dark:text-violet-400",
 };
 
 export default function Skills() {
