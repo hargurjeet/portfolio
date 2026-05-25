@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ChatWidget from "@/components/ChatWidget";
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+const outfit = Outfit({
+  variable: "--font-heading",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
     >
       <body className="min-h-screen bg-background text-foreground">
         <ThemeProvider>

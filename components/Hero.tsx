@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown, Download, BrainCircuit, Layers, Network, BarChart2 } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "@/components/Icons";
 
@@ -25,16 +24,6 @@ const roles = [
 
 
 export default function Hero() {
-  const [titleIndex, setTitleIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(
-      () => setTitleIndex((i) => (i + 1) % titles.length),
-      2800
-    );
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       {/* Dot grid */}
@@ -50,10 +39,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-primary text-xs font-mono tracking-[0.2em] uppercase mb-6">
-            Available for new opportunities
-          </p>
-
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4 leading-tight">
             Hargurjeet
             <br />
@@ -62,25 +47,23 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="h-12 flex items-center mb-6">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={titleIndex}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.35 }}
-                className="text-2xl md:text-3xl text-foreground/70 font-medium"
+          <div className="relative pl-5 mb-8 flex flex-col gap-2">
+            {/* The vertical glowing gradient strip */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-blue-500 to-cyan-500 rounded-full" />
+            
+            {titles.map((title) => (
+              <span 
+                key={title} 
+                className="text-foreground/80 font-mono text-xs md:text-sm tracking-[0.18em] uppercase font-bold"
               >
-                {titles[titleIndex]}
-              </motion.p>
-            </AnimatePresence>
+                {title}
+              </span>
+            ))}
           </div>
 
           <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
-            Building production-grade LLM systems, RAG pipelines, and agentic
-            workflows at British Telecom. 15+ years turning complex data into
-            measurable business outcomes.
+            I bridge the gap between notebook prototypes and production-grade Generative AI systems.
+            Deploying high-accuracy RAG pipelines, orchestrating multi-agent workflows, and designing strict evaluation frameworks that catch hallucinations before they reach production.
           </p>
 
           {/* Tech chip row */}
@@ -134,41 +117,65 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* ── Right column ── */}
-        <div className="flex flex-col gap-4">
-
-          {/* Card 1 — Open To */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="bg-card border border-border rounded-2xl p-5"
-          >
-            {/* Header */}
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-xs font-mono tracking-widest uppercase text-primary">
-                Open To
-              </span>
+        {/* ── Right column: Impact Snapshot ── */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none"
+        >
+          {/* Card 1: RAG Extraction */}
+          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-primary/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-all duration-300" />
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-mono text-primary uppercase tracking-wider font-semibold">BT RAG</span>
+              <BrainCircuit size={18} className="text-primary" />
             </div>
+            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">70%</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Reduction in manual document extraction time via production LLM pipelines.
+            </p>
+          </div>
 
-            {/* Role list */}
-            <div>
-              {roles.map(({ icon: Icon, label }, i) => (
-                <div
-                  key={label}
-                  className={`flex items-center gap-2.5 px-2 py-2.5 rounded-lg hover:bg-primary/5 transition-colors -mx-2 ${
-                    i < roles.length - 1 ? "border-b border-border/50" : ""
-                  }`}
-                >
-                  <Icon size={14} className="text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium text-foreground">{label}</span>
-                </div>
-              ))}
+          {/* Card 2: Shell Maintenance */}
+          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-emerald-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-all duration-300" />
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-mono text-emerald-500 uppercase tracking-wider font-semibold">Shell ML</span>
+              <BarChart2 size={18} className="text-emerald-500" />
             </div>
-          </motion.div>
+            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Cut in oil refinery maintenance costs through predictive modeling.
+            </p>
+          </div>
 
-        </div>
+          {/* Card 3: BT Sales Boost */}
+          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-cyan-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-all duration-300" />
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-mono text-cyan-500 uppercase tracking-wider font-semibold">BT Recs</span>
+              <Layers size={18} className="text-cyan-500" />
+            </div>
+            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Increase in Value-Added Service sales using market-basket models.
+            </p>
+          </div>
+
+          {/* Card 4: Document Scale */}
+          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-purple-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-16 h-16 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-all duration-300" />
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-xs font-mono text-purple-500 uppercase tracking-wider font-semibold">Scale</span>
+              <Network size={18} className="text-purple-500" />
+            </div>
+            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">90%+</h3>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Accuracy in multimodal document processing on 100K+ PDFs.
+            </p>
+          </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
