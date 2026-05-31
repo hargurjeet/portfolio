@@ -7,16 +7,16 @@ import { GitHubIcon } from "@/components/Icons";
 
 const projects = [
   {
-    title: "Antigravity Studio: Autonomous Self-Correcting UI Designer",
+    title: "Antigravity: Autonomous UI Designer",
     description: [
-      "**Closed-Loop Critic & Self-Correction**: Implemented a **critique system** where an evaluator agent scores each generated **mockup image** against guidelines, analyzing **multimodal image data** and sending structured feedback to trigger autonomous redraws.",
-      "**State & Memory Management**: Managed agent context retention and state persistence across iterations using a central memory store to refine subsequent **multimodal image generation** attempts based on critic feedback.",
-      "**Execution Guardrails & Robustness**: Engineered strict execution boundaries with **JSON schema enforcement**, retry loops, and **degrade-gracefully fallbacks** via **pre-trial groups** to prevent infinite loops, malformed **image data payloads**, and agent divergence.",
-      "**Real-Time Streaming Timeline**: Built a high-fidelity stream to trace and display the **agentic step-by-step cognitive thoughts and evaluations** alongside **intermediate image drawing cycles** in real-time.",
-      "**Google Agentic Systems Orchestration**: Orchestrated the multi-agent cognitive architecture using the **Google Gen AI SDK (Google Agentic Systems)** to coordinate **multimodal Gemini 2.5** and **Imagen 4 Ultra** models to sequentially dissect briefs, map brand DNA, and generate high-fidelity **mockup images**.",
+      "**Closed-Loop Critic**: Scores generated **mockup images** against guidelines, analyzing **multimodal image data** to trigger autonomous redraws.",
+      "**State & Memory**: Manages agent context and state retention across iterations using a central memory store to refine subsequent **image generation**.",
+      "**Robust Guardrails**: Enforces strict boundaries via **JSON schema validation**, retry loops, and **degrade-gracefully fallbacks** via **pre-trial groups**.",
+      "**Streaming Timeline**: Traces and displays the **agentic step-by-step cognitive thoughts and evaluations** alongside intermediate drawing cycles.",
+      "**Google Agentic Systems**: Orchestrates **multimodal Gemini 2.5** and **Imagen 4 Ultra** models to analyze briefs, map brand DNA, and generate high-fidelity **images**.",
     ],
     outcome:
-      "A state-of-the-art autonomous design system showcasing expert command over **multimodal image data**, shifting the paradigm from simple text-to-image prompting to self-correcting agentic loops for high-fidelity brand **image** alignment.",
+      "A state-of-the-art design workspace demonstrating expert command over **multimodal image data** through self-correcting agentic loops.",
     tags: ["Gemini 2.5", "Imagen 4", "Google Agentic Systems", "Critique Loop", "Memory Management", "Real-Time Streaming", "Next.js 16", "Tailwind CSS v4"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/image-generator-nextjs",
