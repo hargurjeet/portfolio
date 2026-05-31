@@ -9,7 +9,8 @@ const projects = [
   {
     title: "Antigravity: Autonomous UI Designer",
     description: [
-      "**Closed-Loop Critic**: Scores generated **mockup images** against guidelines, analyzing **multimodal image data** to trigger autonomous redraws.",
+      "**Closed-Loop Critic**: Triggers autonomous redraw cycles by validating generated **mockup images** against guidelines.",
+      "**Evaluator Scoring**: Computes quantitative metrics for **brand consistency**, **color alignment**, and **layout accuracy** to score each generation attempt.",
       "**State & Memory**: Manages agent context and state retention across iterations using a central memory store to refine subsequent **image generation**.",
       "**Robust Guardrails**: Enforces strict boundaries via **JSON schema validation**, retry loops, and **degrade-gracefully fallbacks** via **pre-trial groups**.",
       "**Streaming Timeline**: Traces and displays the **agentic step-by-step cognitive thoughts and evaluations** alongside intermediate drawing cycles.",
