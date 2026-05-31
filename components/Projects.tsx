@@ -13,11 +13,11 @@ const projects = [
       "**State & Memory Management**: Managed agent context retention and state persistence across iterations using a central memory store to refine subsequent drawing attempts based on critic feedback.",
       "**Execution Guardrails & Robustness**: Engineered strict execution boundaries with **JSON schema enforcement**, retry loops, and **degrade-gracefully fallbacks** via **pre-trial groups** to prevent infinite loops and agent divergence.",
       "**Real-Time Streaming Timeline**: Built a high-fidelity stream to trace and display the **agentic step-by-step cognitive thoughts and evaluations** alongside drawing cycles in real-time.",
-      "**Multi-Agent Cognitive Workflows**: Architected an autonomous pipeline powered by **Gemini 2.5** and **Imagen 4 Ultra** that sequentially dissects briefs, maps brand DNA, and designs visual mockups.",
+      "**Google Agentic Systems Orchestration**: Orchestrated the multi-agent cognitive architecture using the **Google Gen AI SDK (Google Agentic Systems)** to coordinate **Gemini 2.5** and **Imagen 4 Ultra**, sequentially dissecting design briefs, generating layouts, and drawing mockups.",
     ],
     outcome:
       "A state-of-the-art autonomous design system that shifts the paradigm from simple text-to-image prompts to self-correcting agentic loops, ensuring high brand alignment through closed-loop critique.",
-    tags: ["Gemini 2.5", "Imagen 4", "Agentic Workflows", "Critique Loop", "Memory Management", "Real-Time Streaming", "Next.js 16", "Tailwind CSS v4"],
+    tags: ["Gemini 2.5", "Imagen 4", "Google Agentic Systems", "Critique Loop", "Memory Management", "Real-Time Streaming", "Next.js 16", "Tailwind CSS v4"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/image-generator-nextjs",
     liveUrl: "https://hargurjeet.dev/Antigravitystudio",
