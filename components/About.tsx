@@ -44,7 +44,7 @@ export default function About() {
 
             {/* Story */}
             <div>
-              <div className="space-y-5 text-foreground/80 text-lg leading-relaxed">
+              <div className="space-y-5 text-foreground/80 text-lg leading-relaxed text-justify">
                 <p>
                   At British Telecom I&apos;m leading the Generative AI
                   charge — deploying RAG-powered chatbots on AWS Bedrock, building
