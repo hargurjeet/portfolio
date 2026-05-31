@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
+          <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed text-justify">
             I bridge the gap between proof-of-concept AI models and resilient, production-grade Generative AI architectures.
             Specializing in deploying high-fidelity enterprise RAG systems, orchestrating autonomous multi-agent workflows, and implementing robust MLOps guardrails that ensure safety, accuracy, and performance at scale.
           </p>
