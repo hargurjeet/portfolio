@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download, BrainCircuit, Layers, Network, BarChart2 } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "@/components/Icons";
 
-const titles = [
-  "Senior Data Scientist",
-  "GenAI Engineer",
-  "RAG Systems Architect",
-  "LLM Specialist",
-];
 
 const techChips = [
   "LangChain", "CrewAI", "AWS Bedrock", "RAG", "LangGraph", "FastAPI", "Python",
@@ -47,18 +41,17 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="relative pl-5 mb-8 flex flex-col gap-2">
-            {/* The vertical glowing gradient strip */}
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-blue-500 to-cyan-500 rounded-full" />
-            
-            {titles.map((title) => (
-              <span 
-                key={title} 
-                className="text-foreground/80 font-mono text-xs md:text-sm tracking-[0.18em] uppercase font-bold"
-              >
-                {title}
-              </span>
-            ))}
+          <div className="flex flex-col gap-2.5 mb-8">
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground/90 font-heading">
+              Principal GenAI Architect & Data Scientist
+            </h2>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-muted-foreground text-xs md:text-sm font-mono tracking-wider">
+              <span>Enterprise RAG</span>
+              <span className="text-primary font-bold">•</span>
+              <span>Agentic Workflows</span>
+              <span className="text-primary font-bold">•</span>
+              <span>MLOps & Scale</span>
+            </div>
           </div>
 
           <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
