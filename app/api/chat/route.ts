@@ -21,30 +21,30 @@ CAREER TIMELINE:
 Total: 15+ years (9+ years in data science/ML, 3+ years in Generative AI)
 
 CURRENT ROLE — BRITISH TELECOM (BT):
-1. RAG Chatbot: Deployed production-grade AI chatbot using LLMs + RAG. Reduced manual data extraction time by 70%. Built AWS Textract + pdfplumber pipeline achieving 90%+ accuracy on 100K+ multimodal documents. Used OpenSearch for vector indexing, AWS Bedrock for LLM interaction.
-2. Agentic Workflows: Multi-step agentic system using CrewAI with tool-augmented pipelines and guardrails to minimise hallucinations.
-3. LLM Evaluation: Framework using Ragas to assess prompt alignment, answer relevance, toxicity, bias, and hallucination detection.
-4. Deployment & MLOps: Docker containerisation, CI/CD pipelines, custom logging for latency and model performance monitoring on AWS.
-5. SD-WAN Recommendation Model: Multi-label recommendation using Random Forest + XGBoost. 10% increase in premium product sales.
-6. VAS Recommendation System: Market basket analysis using Apriori algorithm. 30% increase in VAS sales.
+1. RAG Chatbot & Conversational AI: Architected and delivered an enterprise conversational AI system using LLMs and RAG. Reduced manual document extraction time by 70%. Scaled a multimodal pipeline via AWS Textract + OpenSearch to process 100K+ documents (PDFs, scans, images) with 90%+ accuracy and p50/p95/p99 latency tracking.
+2. Agentic Workflows: Multi-step agentic pipelines using CrewAI and LangGraph, integrating JSON schema validation, retry loops, and custom guardrails to minimize hallucinations.
+3. LLM Evaluation & Observability: Built an evaluation framework using Ragas and LLM-as-judge pipelines for faithfulness, bias, toxicity, and hallucination metrics. Set up Langfuse observability for token/latency tracing.
+4. Email Intelligence & Automation: Built an end-to-end pipeline processing 6,000+ weekly escalation emails using AWS Lambda, Step Functions, and MS Graph API. Fine-tuned LLaMA-2 7B locally via QLoRA for a 40% F1-score improvement in field extraction.
+5. Recommendation Systems: Multi-label classification models (Random Forest + XGBoost) increasing premium SD-WAN product sales by 10%. Implemented market basket analysis using Apriori algorithm increasing Value-Added Services (VAS) sales by 30%.
 
 PREVIOUS ROLE — ROYAL DUTCH SHELL:
-1. Materials Delivery Forecasting: Power BI dashboard and ML models across 5 geographies. 10% budget savings.
-2. Predictive Maintenance: ML models (XGBoost, Random Forests, Decision Trees) for oil refinery equipment. 30% reduction in maintenance costs, 25% reduction in unplanned downtime.
-3. Big Data: PySpark, SparkSQL, ETL, data warehousing. Statistical techniques: classification, clustering, statistical inference.
+1. Predictive Maintenance: Built ML models (XGBoost, Random Forest) via SHAP-based interpretability and ROC-AUC scoring for refinery equipment, cutting maintenance costs by 30% and unplanned downtime by 25%.
+2. Materials Delivery Forecasting: Designed data pipelines (Pandas, NumPy) and Power BI dashboards to forecast materials delivery across 5 geographies, yielding 10% budget savings in the first year.
+3. Big Data & Analytics: 5+ years of experience with data warehousing, ETL, PySpark, SparkSQL, clustering, and statistical inference.
 
 EARLY CAREER — TCS:
-System Integration Testing (SIT) and UAT for client PoS systems. One year in UK. Expertise in PCI DSS and ISO 8583 protocols.
+1. SIT & UAT Testing: Managed System Integration Testing and UAT to validate client PoS (Point of Sale) systems at enterprise scale. Spent one year onsite in the UK guiding offshore teams.
+2. Domain Expertise: Worked extensively with card and payment systems, PCI standards, and ISO 8583 protocols.
 
 KEY ACHIEVEMENTS:
-- 70% reduction in manual data extraction time (BT)
-- 90%+ document extraction accuracy (BT)
-- 100K+ multimodal documents processed at scale (BT)
-- 30% increase in VAS sales (BT)
-- 10% increase in premium SD-WAN sales (BT)
-- 30% reduction in maintenance costs (Shell)
-- 25% reduction in unplanned downtime (Shell)
-- 10% budget savings from delivery forecasting (Shell)
+- 70% reduction in manual data extraction time (BT RAG Chatbot)
+- 90%+ document extraction accuracy on 100K+ files (BT)
+- 40% F1-score improvement in email intelligence via local LLaMA-2 QLoRA fine-tuning (BT)
+- 30% increase in Value-Added Services sales using Apriori model (BT)
+- 10% increase in premium SD-WAN product sales (BT)
+- 30% reduction in equipment maintenance costs (Shell ML)
+- 25% reduction in unplanned equipment downtime (Shell)
+- 10% budget savings from materials delivery forecasting (Shell)
 
 TECHNICAL SKILLS:
 Generative AI & LLMs: Vector Databases, RAG design patterns, Prompt Engineering, Guardrails, PII Filtering, LLM Fine-tuning, Agentic Workflows, LLM Observability, MCP. OpenAI, Anthropic, and Gemini APIs.
@@ -67,15 +67,16 @@ RESEARCH THESIS:
 Integration of contextual language models (GPT-3.5, Mixtral, Llama 3.1) with classical ML (XGBoost, Random Forest) for tabular datasets. Developed methodology to convert tabular data into enriched text. Applied PCA for input optimisation.
 
 OPEN SOURCE PROJECTS:
-1. Production-Grade Hybrid RAG System (github.com/hargurjeet/hybrid-rag) — Live
-2. Resume Parser (github.com/hargurjeet/resume-parser) — Live
-3. Local SLM Benchmarking Study (github.com/hargurjeet/local_slm_experiments) — Research
-4. Finance Planner (github.com/hargurjeet/Finance_Planner) — In Progress
-5. Agentic Search Platform (MCP + FastAPI)
-6. Blog Generator using Llama 2 (live)
-7. Traffic Sign Classifier (computer vision)
-8. Detecting Fake News (NLP classification)
-9. Anime Recommendation System
+1. Antigravity Studio: Autonomous Self-Correcting UI Designer (Gemini 2.5 + Imagen 4 Ultra, real-time agent ReAct loop tracking, closed-loop evaluator, CI/CD) — Live
+2. Production-Grade Hybrid RAG System (github.com/hargurjeet/hybrid-rag) — Live
+3. AI-Powered Resume Parser (github.com/hargurjeet/resume-parser) — Live
+4. Local AI Assistant using Ollama (github.com/hargurjeet/local_slm_experiments) — Research
+5. DuckDB Database MCP Server (github.com/hargurjeet/database-mcp) — Open Source
+6. Finance Planner (github.com/hargurjeet/Finance_Planner) — In Progress
+7. Blog Generator using Llama 2 (live)
+8. Traffic Sign Classifier (computer vision)
+9. Detecting Fake News (NLP classification)
+10. Anime Recommendation System
 
 COMMUNITY: Active on Stack Overflow, Jovian, PyTorch forums. Publishes on Medium: gurjeet333.medium.com.
 
