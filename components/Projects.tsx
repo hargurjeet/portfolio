@@ -23,22 +23,6 @@ const projects = [
     liveUrl: "https://hargurjeet.dev/Antigravitystudio",
   },
   {
-    title: "AI-Powered Resume Parser",
-    description: [
-      "PDF → structured JSON pipeline: pdfplumber extracts text → **Llama 3.3 70B** parses via Fireworks AI",
-      "**JSON schema enforcement**: instructor library constrains LLM output to an exact **Pydantic v2** model",
-      "**Retry mechanism**: catches invalid outputs, re-prompts the LLM once, then fails gracefully — no silent errors",
-      "Split-view UI: original PDF alongside **experience timeline**, color-coded skill tags, and education cards",
-      "One-click JSON export, dark/light mode, drag-and-drop upload with animated progress steps",
-    ],
-    outcome:
-      "Live on Fly.io. **Structured output guaranteed at the schema level** — retry logic and graceful failure handle the edge cases that plain prompting misses.",
-    tags: ["FastAPI", "Next.js", "Llama 3.3 70B", "Fireworks AI", "pdfplumber", "Pydantic", "Fly.io"],
-    badge: "Live App",
-    githubUrl: "https://github.com/hargurjeet/resume-parser",
-    liveUrl: "https://hargurjeet-resume-ui.fly.dev",
-  },
-  {
     title: "Local AI Assistant & SLM Benchmarking",
     description: [
       "**Local SLM evaluation**: Developed a **FastAPI** testing harness benchmarking **Llama 3.2 (3B)**, **Phi-3 Mini (3.8B)**, and **Mistral (7B)** fully on-device via **Ollama**.",
@@ -68,6 +52,22 @@ const projects = [
     badge: "Open Source",
     githubUrl: "https://github.com/hargurjeet/database-mcp",
     liveUrl: "https://github.com/hargurjeet/database-mcp",
+  },
+  {
+    title: "AI-Powered Resume Parser",
+    description: [
+      "PDF → structured JSON pipeline: pdfplumber extracts text → **Llama 3.3 70B** parses via Fireworks AI",
+      "**JSON schema enforcement**: instructor library constrains LLM output to an exact **Pydantic v2** model",
+      "**Retry mechanism**: catches invalid outputs, re-prompts the LLM once, then fails gracefully — no silent errors",
+      "Split-view UI: original PDF alongside **experience timeline**, color-coded skill tags, and education cards",
+      "One-click JSON export, dark/light mode, drag-and-drop upload with animated progress steps",
+    ],
+    outcome:
+      "Live on Fly.io. **Structured output guaranteed at the schema level** — retry logic and graceful failure handle the edge cases that plain prompting misses.",
+    tags: ["FastAPI", "Next.js", "Llama 3.3 70B", "Fireworks AI", "pdfplumber", "Pydantic", "Fly.io"],
+    badge: "Live App",
+    githubUrl: "https://github.com/hargurjeet/resume-parser",
+    liveUrl: "https://hargurjeet-resume-ui.fly.dev",
   },
   {
     title: "Production-Grade RAG Evaluation Pipeline",
