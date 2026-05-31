@@ -39,16 +39,16 @@ const projects = [
     liveUrl: "https://hargurjeet-resume-ui.fly.dev",
   },
   {
-    title: "Local AI Assistant using Ollama",
+    title: "Local AI Assistant & SLM Benchmarking",
     description: [
-      "Runs **Phi-3 Mini**, **Mistral 7B**, and **LLaMA 3.2** fully on-device via Ollama — no cloud calls",
-      "FastAPI backend for offline operation with structured JSON outputs",
-      "Pydantic validation and retry logic ensure consistent, well-formed responses",
-      "Benchmarked all three models across speed, accuracy, and resource trade-offs",
+      "**Local SLM evaluation**: Developed a **FastAPI** testing harness benchmarking **Llama 3.2 (3B)**, **Phi-3 Mini (3.8B)**, and **Mistral (7B)** fully on-device via **Ollama**.",
+      "**Inference speed profiling**: Measured raw performance where **Phi-3 Mini** led at **22.70 tokens/sec** (**323.99ms TTFT**), followed closely by **Llama 3.2** at **22.24 tokens/sec** (**427.29ms TTFT**).",
+      "**Pydantic schema enforcement**: Structured LLM outputs using validation schemas. **Llama 3.2** achieved **100% compliance** via retry reprompts, while **Mistral 7B** achieved **90% compliance** zero-shot.",
+      "**Resource allocation tracking**: Measured memory-bound constraints on Apple Silicon **Mac mini (16GB RAM)** where CPU load remained low (**13–15%**) but loaded memory hit **88.8% to 94.4% of RAM**.",
     ],
     outcome:
-      "Rigorous benchmark published on Dev.to — documented which model wins for which use case on consumer hardware.",
-    tags: ["Ollama", "FastAPI", "LLaMA 3.2", "Mistral 7B", "Phi-3", "Pydantic", "Python"],
+      "Rigorous local benchmark of 30 multi-domain prompts published on **Dev.to** and **GitHub**. Proved that **Llama 3.2 (3B)** is the most reliable for structured JSON pipelines, while **Phi-3 Mini** excels in speed and latency.",
+    tags: ["Ollama", "FastAPI", "Llama 3.2", "Mistral 7B", "Phi-3", "Pydantic", "Python", "Apple Silicon"],
     badge: "Open Source",
     githubUrl: "https://github.com/hargurjeet/local_slm_experiments",
     liveUrl: "https://dev.to/gurjeet333/running-llms-locally-a-rigorous-benchmark-of-phi-3-mistral-and-llama-32-on-ollama-2289",

@@ -70,7 +70,7 @@ OPEN SOURCE PROJECTS:
 1. Antigravity Studio: Autonomous Self-Correcting UI Designer (Gemini 2.5 + Imagen 4 Ultra, real-time agent ReAct loop tracking, closed-loop evaluator, CI/CD) — Live
 2. Production-Grade Hybrid RAG System (github.com/hargurjeet/hybrid-rag) — Live
 3. AI-Powered Resume Parser (github.com/hargurjeet/resume-parser) — Live
-4. Local AI Assistant using Ollama (github.com/hargurjeet/local_slm_experiments) — Research
+4. Local AI Assistant & SLM Benchmarking (github.com/hargurjeet/local_slm_experiments) — Research
 5. DuckDB Database MCP Server (github.com/hargurjeet/database-mcp) — Open Source
 6. Finance Planner (github.com/hargurjeet/Finance_Planner) — In Progress
 7. Blog Generator using Llama 2 (live)
