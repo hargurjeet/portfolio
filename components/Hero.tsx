@@ -92,7 +92,7 @@ export default function Hero() {
               View My Work
             </a>
             <a
-              href="/Hargurjeet _Agenti_AI_Specialist_2026.pdf"
+              href="/Hargurjeet _AI_Architect_2026.pdf"
               download
               className="border border-border hover:border-primary text-foreground px-8 py-3 rounded-lg font-medium transition-all flex items-center gap-2 hover:text-primary"
             >

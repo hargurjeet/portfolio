@@ -108,7 +108,7 @@ export default function Navbar() {
 
           {/* Resume */}
           <a
-            href="/Hargurjeet _Agenti_AI_Specialist_2026.pdf"
+            href="/Hargurjeet _AI_Architect_2026.pdf"
             download
             className="flex items-center gap-1.5 text-sm bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full transition-colors font-medium"
           >
