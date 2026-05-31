@@ -45,18 +45,18 @@ export default function Hero() {
             <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground/90 font-heading">
               Principal GenAI Architect & Data Scientist
             </h2>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-muted-foreground text-xs md:text-sm font-mono tracking-wider">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-foreground/75 text-xs md:text-sm font-semibold tracking-[0.1em] uppercase font-heading">
               <span>Enterprise RAG</span>
-              <span className="text-primary font-bold">•</span>
+              <span className="text-primary font-black">•</span>
               <span>Agentic Workflows</span>
-              <span className="text-primary font-bold">•</span>
+              <span className="text-primary font-black">•</span>
               <span>MLOps & Scale</span>
             </div>
           </div>
 
           <p className="text-muted-foreground text-lg max-w-xl mb-8 leading-relaxed">
-            I bridge the gap between notebook prototypes and production-grade Generative AI systems.
-            Deploying high-accuracy RAG pipelines, orchestrating multi-agent workflows, and designing strict evaluation frameworks that catch hallucinations before they reach production.
+            I bridge the gap between proof-of-concept AI models and resilient, production-grade Generative AI architectures.
+            Specializing in deploying high-fidelity enterprise RAG systems, orchestrating autonomous multi-agent workflows, and implementing robust MLOps guardrails that ensure safety, accuracy, and performance at scale.
           </p>
 
           {/* Tech chip row */}
