@@ -7,20 +7,19 @@ import { GitHubIcon } from "@/components/Icons";
 
 const projects = [
   {
-    title: "Production-Grade RAG Evaluation Pipeline",
+    title: "Antigravity Studio: Autonomous Self-Correcting UI Designer",
     description: [
-      "**Hybrid retrieval** — BM25 sparse + contextual dense search — fed through a **Cohere reranker**",
-      "**Citation enforcement** grounds every answer in source documents; no hallucinated references",
-      "Prompts **version-controlled** in a config file — every change is tracked and reproducible",
-      "Offline **RAGAS** script measures faithfulness, answer relevancy, and context precision",
-      "**GitHub Actions gate** runs eval on every PR; merge blocked if any metric drops below threshold",
+      "**Multimodal Agentic Pipeline**: Orchestrates a self-correcting agent workflow using **Gemini 2.5** and **Imagen 4 Ultra** to convert design briefs into visual mockups and brand DNAs.",
+      "**Unified Storytelling Dashboard**: Integrates step-by-step cognitive nodes, a live terminal console, automated brand DNA (HEX palettes, layouts), and an **approved comparison slider**.",
+      "**Quad-Theme Design System**: Features a high-performance scoped variables toggle supporting **Space Dark**, **Paper Light**, **Solar Theme**, and **Apple Human Interface Guidelines (HIG)**.",
+      "**Multi-Zone Proxy Routing**: Configured transparent Vercel subpath rewrites scoping page bundles under **`/Antigravitystudio`** with automated **GitHub Actions CI/CD** deployment.",
     ],
     outcome:
-      "Quality regressions caught at PR stage, not in production. Stack: LangChain/LangGraph, Chroma vector store, Cohere reranker — every retrieval step traceable, every prompt change auditable.",
-    tags: ["RAG", "RAGAS", "BM25", "LangChain", "LangGraph", "Cohere Reranker", "Chroma", "GitHub Actions", "Python"],
+      "A state-of-the-art visual workspace demonstrating real-time Server-Sent Events (**SSE**) agent streaming, closed-loop evaluator scoring, and premium multi-theme responsive frontends.",
+    tags: ["Next.js 16", "React 19", "Gemini 2.5", "Imagen 4", "Framer Motion", "Vercel Multi-Zone", "GitHub Actions", "Tailwind CSS v4"],
     badge: "Live App",
-    githubUrl: "https://github.com/hargurjeet/hybrid-rag",
-    liveUrl: "https://huggingface.co/spaces/Hargurjeet/hybrid-rag-nextjs",
+    githubUrl: "https://github.com/hargurjeet/image-generator-nextjs",
+    liveUrl: "https://hargurjeet.dev/Antigravitystudio",
   },
   {
     title: "AI-Powered Resume Parser",
@@ -68,6 +67,22 @@ const projects = [
     badge: "Open Source",
     githubUrl: "https://github.com/hargurjeet/database-mcp",
     liveUrl: "https://github.com/hargurjeet/database-mcp",
+  },
+  {
+    title: "Production-Grade RAG Evaluation Pipeline",
+    description: [
+      "**Hybrid retrieval** — BM25 sparse + contextual dense search — fed through a **Cohere reranker**",
+      "**Citation enforcement** grounds every answer in source documents; no hallucinated references",
+      "Prompts **version-controlled** in a config file — every change is tracked and reproducible",
+      "Offline **RAGAS** script measures faithfulness, answer relevancy, and context precision",
+      "**GitHub Actions gate** runs eval on every PR; merge blocked if any metric drops below threshold",
+    ],
+    outcome:
+      "Quality regressions caught at PR stage, not in production. Stack: LangChain/LangGraph, Chroma vector store, Cohere reranker — every retrieval step traceable, every prompt change auditable.",
+    tags: ["RAG", "RAGAS", "BM25", "LangChain", "LangGraph", "Cohere Reranker", "Chroma", "GitHub Actions", "Python"],
+    badge: "Live App",
+    githubUrl: "https://github.com/hargurjeet/hybrid-rag",
+    liveUrl: "https://huggingface.co/spaces/Hargurjeet/hybrid-rag-nextjs",
   },
 ];
 
