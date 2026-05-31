@@ -9,14 +9,15 @@ const projects = [
   {
     title: "Antigravity Studio: Autonomous Self-Correcting UI Designer",
     description: [
-      "**Multimodal Agentic Pipeline**: Orchestrates a self-correcting agent workflow using **Gemini 2.5** and **Imagen 4 Ultra** to convert design briefs into visual mockups and brand DNAs.",
-      "**Unified Storytelling Dashboard**: Integrates step-by-step cognitive nodes, a live terminal console, automated brand DNA (HEX palettes, layouts), and an **approved comparison slider**.",
-      "**Quad-Theme Design System**: Features a high-performance scoped variables toggle supporting **Space Dark**, **Paper Light**, **Solar Theme**, and **Apple Human Interface Guidelines (HIG)**.",
-      "**Multi-Zone Proxy Routing**: Configured transparent Vercel subpath rewrites scoping page bundles under **`/Antigravitystudio`** with automated **GitHub Actions CI/CD** deployment.",
+      "**Multi-Agent Cognitive Workflows**: Architected an autonomous pipeline powered by **Gemini 2.5** and **Imagen 4 Ultra** that sequentially dissects briefs, maps brand DNA, and designs visual mockups.",
+      "**Closed-Loop Critic & Self-Correction**: Implemented a **critique system** where an evaluator agent scores each mockup attempt against original guidelines, sending structured feedback to trigger autonomous redraws.",
+      "**State & Memory Management**: Managed agent context retention and state persistence across iterations using a central memory store to refine subsequent drawing attempts based on critic feedback.",
+      "**Execution Guardrails & Robustness**: Engineered strict execution boundaries with JSON schema enforcement, retry loops, and degrade-gracefully fallbacks to prevent infinite loops and agent divergence.",
+      "**Real-Time SSE Storytelling**: Built a high-fidelity stream that leverages **Server-Sent Events (SSE)** to trace and display the AI agent's step-by-step cognitive thoughts, evaluations, and drawing cycles in real-time.",
     ],
     outcome:
-      "A state-of-the-art visual workspace demonstrating real-time Server-Sent Events (**SSE**) agent streaming, closed-loop evaluator scoring, and premium multi-theme responsive frontends.",
-    tags: ["Next.js 16", "React 19", "Gemini 2.5", "Imagen 4", "Framer Motion", "Vercel Multi-Zone", "GitHub Actions", "Tailwind CSS v4"],
+      "A state-of-the-art autonomous design system that shifts the paradigm from simple text-to-image prompts to self-correcting agentic loops, ensuring high brand alignment through closed-loop critique.",
+    tags: ["Gemini 2.5", "Imagen 4", "Agentic Workflows", "Critique Loop", "Memory Management", "Server-Sent Events (SSE)", "Next.js 16", "Tailwind CSS v4"],
     badge: "Live App",
     githubUrl: "https://github.com/hargurjeet/image-generator-nextjs",
     liveUrl: "https://hargurjeet.dev/Antigravitystudio",
