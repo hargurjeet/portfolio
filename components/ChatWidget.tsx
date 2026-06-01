@@ -91,13 +91,11 @@ export default function ChatWidget() {
   function clearChat() {
     setMessages([GREETING]);
     setInput("");
-  }
-
-  return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  }  return (
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3 w-[calc(100vw-2rem)] sm:w-[440px]">
       {/* Chat panel */}
       {isOpen && (
-        <div className="w-[520px] bg-card border border-border rounded-2xl shadow-xl flex flex-col overflow-hidden">
+        <div className="w-full bg-card border border-border rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-primary">
             <div className="flex items-center gap-2">
@@ -110,13 +108,13 @@ export default function ChatWidget() {
               <button
                 onClick={clearChat}
                 title="Clear chat"
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-white/70 hover:text-white transition-colors cursor-pointer"
               >
                 <RotateCcw size={13} />
               </button>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white/70 hover:text-white transition-colors"
+                className="text-white/70 hover:text-white transition-colors cursor-pointer"
               >
                 <X size={16} />
               </button>
@@ -124,14 +122,14 @@ export default function ChatWidget() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[280px] max-h-[400px]">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[220px] max-h-[320px] sm:min-h-[280px] sm:max-h-[400px]">
             {messages.map((msg, i) => (
               <div
                 key={i}
                 className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[82%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                  className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                     msg.role === "user"
                       ? "bg-primary text-white rounded-br-sm"
                       : "bg-secondary dark:bg-muted text-foreground rounded-bl-sm"
@@ -163,13 +161,13 @@ export default function ChatWidget() {
           </div>
 
           {/* Persistent suggestion chips */}
-          <div className="px-4 py-2 border-t border-border/50 flex flex-wrap gap-1.5">
+          <div className="px-4 py-2 border-t border-border/50 flex flex-wrap gap-1.5 bg-card">
             {SUGGESTIONS.map((s) => (
               <button
                 key={s}
                 onClick={() => sendMessage(s)}
                 disabled={isLoading}
-                className="text-xs bg-primary/8 dark:bg-primary/10 border border-primary/20 text-primary px-2.5 py-1 rounded-full hover:bg-primary/15 transition-colors disabled:opacity-40"
+                className="text-2xs bg-primary/8 dark:bg-primary/10 border border-primary/20 text-primary px-2.5 py-1.5 rounded-full hover:bg-primary/15 transition-colors disabled:opacity-40 cursor-pointer"
               >
                 {s}
               </button>
@@ -177,7 +175,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-border">
+          <div className="p-3 border-t border-border bg-card">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -196,7 +194,7 @@ export default function ChatWidget() {
               <button
                 type="submit"
                 disabled={isLoading || !input.trim()}
-                className="bg-primary hover:bg-primary/90 disabled:opacity-40 text-white p-2 rounded-xl transition-colors"
+                className="bg-primary hover:bg-primary/90 disabled:opacity-40 text-white p-2 rounded-xl transition-colors cursor-pointer"
               >
                 <Send size={16} />
               </button>
@@ -205,14 +203,25 @@ export default function ChatWidget() {
         </div>
       )}
 
-      {/* Floating bubble */}
-      <button
-        onClick={() => setIsOpen((o) => !o)}
-        className="w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105"
-        aria-label={isOpen ? "Close chat" : "Open AI chat assistant"}
-      >
-        {isOpen ? <X size={22} /> : <MessageCircle size={22} />}
-      </button>
+      {/* Floating bubble / pill */}
+      {isOpen ? (
+        <button
+          onClick={() => setIsOpen(false)}
+          className="w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 cursor-pointer self-end shrink-0 border border-white/10"
+          aria-label="Close chat"
+        >
+          <X size={22} />
+        </button>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="flex items-center gap-2.5 px-5 h-14 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg transition-all hover:scale-105 cursor-pointer self-end shrink-0 font-semibold text-sm md:text-base border border-white/10"
+          aria-label="Open AI chat assistant"
+        >
+          <MessageCircle size={18} className="shrink-0 animate-pulse" />
+          <span>Chat with me!</span>
+        </button>
+      )}
     </div>
   );
 }
