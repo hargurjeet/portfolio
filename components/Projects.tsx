@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { Sparkles, BarChart3, Database, FileText, Layers, X, Award } from "lucide-react";
+import { Sparkles, BarChart3, Database, FileText, Layers, X, Award, FolderTree } from "lucide-react";
 
 type GlowColor = "indigo" | "amber" | "emerald" | "cyan" | "rose";
 
@@ -41,6 +41,24 @@ const projects: Project[] = [
     githubUrl: "https://github.com/hargurjeet/image-generator-nextjs",
     liveUrl: "https://antigravity-studio-blush.vercel.app/Antigravitystudio",
     liveLabel: "Launch App",
+  },
+  {
+    title: "Local Multi-Agent Folder Organizer",
+    category: "AI Agents",
+    icon: "folder-tree",
+    glowColor: "indigo",
+    description: [
+      "**Hierarchical Coordinator-Specialist Architecture**: Configures a lead orchestrator agent that partitions folder listings into subtask categories, preventing context window limits.",
+      "**Multi-Agent Concurrency**: Spawns category-specific specialist subagents in parallel using a Python `ThreadPoolExecutor` to slash local Ollama inference latency by **60%**.",
+      "**Pydantic Output Validation**: Enforces strict JSON schemas on local SLMs using CrewAI's output parsing, guaranteeing zero formatting errors.",
+      "**Human-in-the-Loop Safe Gate**: Implements a CLI preview table and user confirmation prompt before mutating any folder structure, supporting a non-destructive dry-run mode.",
+      "**Transactional Rollback Log**: Records all file migrations atomically in a central `history.json` transaction log, facilitating instant programmatic recovery.",
+    ],
+    outcome:
+      "A local-first system running fully on-device via Ollama that restructures cluttered downloads folders into semantic, context-aware nested subdirectories.",
+    tags: ["CrewAI", "Ollama", "Llama 3.2", "Pydantic", "Python", "Local LLMs", "Systems Automation"],
+    badge: "Open Source",
+    githubUrl: "https://github.com/hargurjeet/local_agent_organizer",
   },
   {
     title: "Local AI Assistant & SLM Benchmarking",
@@ -191,6 +209,8 @@ const IconComponent = ({ name, className }: { name: string; className?: string }
       return <FileText className={className} size={18} />;
     case "network":
       return <Layers className={className} size={18} />;
+    case "folder-tree":
+      return <FolderTree className={className} size={18} />;
     default:
       return <Sparkles className={className} size={18} />;
   }
