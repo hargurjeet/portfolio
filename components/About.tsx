@@ -11,16 +11,16 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" ref={ref} className="py-24 px-6 bg-background">
+    <section id="about" ref={ref} className="py-32 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-mono text-xs tracking-[0.2em] uppercase mb-3">
+          <span className="inline-block rounded-full px-3.5 py-1 text-[10px] uppercase tracking-[0.25em] font-medium bg-primary/10 text-primary font-mono mb-4">
             About Me
-          </p>
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
             From IT Analyst to{" "}
             <span className="text-primary">AI Systems Builder</span>

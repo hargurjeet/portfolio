@@ -95,11 +95,14 @@ export default function ChatWidget() {
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3 w-[calc(100vw-2rem)] sm:w-[440px]">
       {/* Chat panel */}
       {isOpen && (
-        <div className="w-full bg-card border border-border rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="w-full bg-background/85 dark:bg-zinc-950/85 backdrop-blur-xl border border-border/80 rounded-2xl shadow-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.06)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300">
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 bg-primary">
+          <div className="flex items-center justify-between px-4 py-3 bg-primary/95 dark:bg-primary/90">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
+              <div className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </div>
               <span className="text-white font-semibold text-sm">
                 Ask about Hargurjeet
               </span>

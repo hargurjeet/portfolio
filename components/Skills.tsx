@@ -93,7 +93,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="skills" ref={ref} className="py-24 px-6 bg-secondary">
+    <section id="skills" ref={ref} className="py-32 px-6 bg-secondary/25">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -101,14 +101,14 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-primary font-mono text-xs tracking-[0.2em] uppercase mb-3">
+          <span className="inline-block rounded-full px-3.5 py-1 text-[10px] uppercase tracking-[0.25em] font-medium bg-primary/10 text-primary font-mono mb-4">
             Expertise
-          </p>
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Technical Skills
           </h2>
         </motion.div>
-
+ 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, i) => (
             <motion.div
@@ -116,28 +116,30 @@ export default function Skills() {
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center text-center hover:border-primary/30 hover:shadow-sm transition-all duration-300"
+              className="bg-secondary/40 border border-border/30 rounded-[1.75rem] p-1.5 group hover:border-primary/30 hover:shadow-md transition-all duration-300 flex"
             >
-              {/* Category icon */}
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${iconBgMap[group.color]}`}>
-                <group.icon size={28} />
-              </div>
-
-              {/* Category name */}
-              <h3 className={`text-xs font-semibold uppercase tracking-widest mb-4 ${headerMap[group.color]}`}>
-                {group.category}
-              </h3>
-
-              {/* Skill chips */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className={`rounded-full px-3 py-1 text-sm font-medium ${colorMap[group.color]}`}
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="bg-card rounded-[calc(1.75rem-0.375rem)] p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] flex flex-col items-center text-center h-full w-full">
+                {/* Category icon */}
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${iconBgMap[group.color]}`}>
+                  <group.icon size={28} />
+                </div>
+ 
+                {/* Category name */}
+                <h3 className={`text-xs font-semibold uppercase tracking-widest mb-4 ${headerMap[group.color]}`}>
+                  {group.category}
+                </h3>
+ 
+                {/* Skill chips */}
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className={`rounded-full px-3 py-1 text-sm font-medium ${colorMap[group.color]}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

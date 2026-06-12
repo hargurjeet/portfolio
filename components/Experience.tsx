@@ -74,31 +74,31 @@ export default function Experience() {
   );
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 px-6 bg-background">
+    <section id="experience" ref={sectionRef} className="py-32 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-mono text-xs tracking-[0.2em] uppercase mb-3">
-            Career
-          </p>
+          <span className="inline-block rounded-full px-3.5 py-1 text-[10px] uppercase tracking-[0.25em] font-medium bg-primary/10 text-primary font-mono mb-4">
+            Career History
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
             Work Experience
           </h2>
         </motion.div>
-
+ 
         <div ref={timelineRef} className="relative">
           {/* Static faint track — always visible */}
           <div className="absolute left-4 top-0 bottom-0 w-px bg-border/50" />
-
+ 
           {/* Scroll-driven fill line */}
           <motion.div
             style={{ height: lineHeight }}
             className="absolute left-4 top-0 w-px origin-top bg-gradient-to-b from-primary via-primary/60 to-primary/20"
           />
-
+ 
           {/* Glowing orb that travels down */}
           <motion.div
             style={{ top: glowY, opacity: glowOpacity }}
@@ -109,7 +109,7 @@ export default function Experience() {
             {/* Inner bright dot */}
             <div className="absolute inset-[4px] rounded-full bg-primary" />
           </motion.div>
-
+ 
           <div className="space-y-10">
             {experiences.map((exp, i) => (
               <motion.div
@@ -119,28 +119,30 @@ export default function Experience() {
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 className="relative pl-12"
               >
-                <div className="absolute left-0 top-2 w-8 h-8 bg-primary rounded-full border-4 border-background flex items-center justify-center z-20">
+                <div className="absolute left-0 top-6 w-8 h-8 bg-primary rounded-full border-4 border-background flex items-center justify-center z-20">
                   <div className="w-2 h-2 bg-white rounded-full" />
                 </div>
-
-                <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/40 hover:shadow-sm transition-all duration-300">
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
-                    <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
-                    <span className="text-xs text-muted-foreground font-mono bg-secondary px-2 py-1 rounded-md">
-                      {exp.period}
-                    </span>
+ 
+                <div className="bg-secondary/40 border border-border/30 rounded-[1.75rem] p-1.5 group hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                  <div className="bg-card rounded-[calc(1.75rem-0.375rem)] p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+                    <div className="flex flex-wrap items-start justify-between gap-2 mb-1">
+                      <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
+                      <span className="text-xs text-muted-foreground font-mono bg-secondary px-2 py-1 rounded-md">
+                        {exp.period}
+                      </span>
+                    </div>
+                    <p className="text-primary text-sm font-medium mb-4">
+                      {exp.company} · {exp.location}
+                    </p>
+                    <ul className="space-y-2">
+                      {exp.highlights.map((h) => (
+                        <li key={h} className="text-muted-foreground text-sm flex gap-2">
+                          <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
+                          <span className="leading-relaxed">{parseBold(h)}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-primary text-sm font-medium mb-4">
-                    {exp.company} · {exp.location}
-                  </p>
-                  <ul className="space-y-2">
-                    {exp.highlights.map((h) => (
-                      <li key={h} className="text-muted-foreground text-sm flex gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">▸</span>
-                        <span className="leading-relaxed">{parseBold(h)}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </motion.div>
             ))}

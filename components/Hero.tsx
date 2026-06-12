@@ -80,32 +80,35 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              className="group bg-primary hover:bg-primary/90 text-white pl-6 pr-2 py-2 rounded-full font-medium transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] flex items-center gap-3 active:scale-[0.98]"
             >
-              View My Work
+              <span>View My Work</span>
+              <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-y-0.5">
+                <ArrowDown size={14} className="text-white" />
+              </span>
             </a>
             <a
-              href="/Hargurjeet _AI_Architect_2026.pdf"
+              href="/Hargurjeet _AIEngineer_Architect_v2.pdf"
               download
-              className="border border-border hover:border-primary text-foreground px-8 py-3 rounded-lg font-medium transition-all flex items-center gap-2 hover:text-primary"
+              className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 hover:text-primary active:scale-[0.98]"
             >
-              <Download size={16} /> Resume
+              <Download size={14} /> Resume
             </a>
             <a
               href="https://www.linkedin.com/in/hargurjeet/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-border hover:border-primary text-foreground px-8 py-3 rounded-lg font-medium transition-all flex items-center gap-2 hover:text-primary"
+              className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 hover:text-primary active:scale-[0.98]"
             >
-              <LinkedInIcon size={16} /> LinkedIn
+              <LinkedInIcon size={14} /> LinkedIn
             </a>
             <a
               href="https://github.com/hargurjeet"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-border hover:border-primary text-foreground px-8 py-3 rounded-lg font-medium transition-all flex items-center gap-2 hover:text-primary"
+              className="border border-border hover:border-primary text-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 hover:text-primary active:scale-[0.98]"
             >
-              <GitHubIcon size={16} /> GitHub
+              <GitHubIcon size={14} /> GitHub
             </a>
           </div>
         </motion.div>
@@ -118,55 +121,63 @@ export default function Hero() {
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto lg:max-w-none"
         >
           {/* Card 1: RAG Extraction */}
-          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-primary/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-all duration-300" />
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-mono text-primary uppercase tracking-wider font-semibold">BT RAG</span>
-              <BrainCircuit size={18} className="text-primary" />
+          <div className="bg-secondary/40 border border-border/30 rounded-[2rem] p-1.5 group hover:border-primary/45 hover:shadow-md transition-all duration-300">
+            <div className="bg-card rounded-[calc(2rem-0.375rem)] p-5 relative overflow-hidden h-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full blur-xl group-hover:bg-primary/10 transition-all duration-300" />
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-mono text-primary uppercase tracking-wider font-semibold">BT RAG</span>
+                <BrainCircuit size={18} className="text-primary" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">70%</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Reduction in manual document extraction time via production LLM pipelines.
+              </p>
             </div>
-            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">70%</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Reduction in manual document extraction time via production LLM pipelines.
-            </p>
           </div>
 
           {/* Card 2: Shell Maintenance */}
-          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-emerald-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-all duration-300" />
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-mono text-emerald-500 uppercase tracking-wider font-semibold">Shell ML</span>
-              <BarChart2 size={18} className="text-emerald-500" />
+          <div className="bg-secondary/40 border border-border/30 rounded-[2rem] p-1.5 group hover:border-emerald-500/45 hover:shadow-md transition-all duration-300">
+            <div className="bg-card rounded-[calc(2rem-0.375rem)] p-5 relative overflow-hidden h-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-all duration-300" />
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-mono text-emerald-500 uppercase tracking-wider font-semibold">Shell ML</span>
+                <BarChart2 size={18} className="text-emerald-500" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Cut in oil refinery maintenance costs through predictive modeling.
+              </p>
             </div>
-            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Cut in oil refinery maintenance costs through predictive modeling.
-            </p>
           </div>
 
           {/* Card 3: BT Sales Boost */}
-          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-cyan-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-all duration-300" />
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-mono text-cyan-500 uppercase tracking-wider font-semibold">BT Recs</span>
-              <Layers size={18} className="text-cyan-500" />
+          <div className="bg-secondary/40 border border-border/30 rounded-[2rem] p-1.5 group hover:border-cyan-500/45 hover:shadow-md transition-all duration-300">
+            <div className="bg-card rounded-[calc(2rem-0.375rem)] p-5 relative overflow-hidden h-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-all duration-300" />
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-mono text-cyan-500 uppercase tracking-wider font-semibold">BT Recs</span>
+                <Layers size={18} className="text-cyan-500" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Increase in Value-Added Service sales using market-basket models.
+              </p>
             </div>
-            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">30%</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Increase in Value-Added Service sales using market-basket models.
-            </p>
           </div>
 
           {/* Card 4: Document Scale */}
-          <div className="bg-card border border-border/50 rounded-2xl p-5 hover:border-purple-500/45 hover:shadow-md transition-all duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-all duration-300" />
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-mono text-purple-500 uppercase tracking-wider font-semibold">Scale</span>
-              <Network size={18} className="text-purple-500" />
+          <div className="bg-secondary/40 border border-border/30 rounded-[2rem] p-1.5 group hover:border-purple-500/45 hover:shadow-md transition-all duration-300">
+            <div className="bg-card rounded-[calc(2rem-0.375rem)] p-5 relative overflow-hidden h-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-purple-500/5 rounded-full blur-xl group-hover:bg-purple-500/10 transition-all duration-300" />
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-xs font-mono text-purple-500 uppercase tracking-wider font-semibold">Scale</span>
+                <Network size={18} className="text-purple-500" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">90%+</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Accuracy in multimodal document processing on 100K+ PDFs.
+              </p>
             </div>
-            <h3 className="text-3xl font-extrabold text-foreground tracking-tight mb-1">90%+</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Accuracy in multimodal document processing on 100K+ PDFs.
-            </p>
           </div>
         </motion.div>
       </div>

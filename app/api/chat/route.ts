@@ -6,6 +6,7 @@ HARGURJEET SINGH GANGER — CANDIDATE KNOWLEDGE BASE
 CONTACT:
 Full Name: Hargurjeet Singh Ganger
 Email: gurjeet333@gmail.com
+Phone: +91 9035828125
 Location: Bangalore, India
 LinkedIn: linkedin.com/in/hargurjeet/
 GitHub: github.com/hargurjeet
@@ -67,16 +68,17 @@ RESEARCH THESIS:
 Integration of contextual language models (GPT-3.5, Mixtral, Llama 3.1) with classical ML (XGBoost, Random Forest) for tabular datasets. Developed methodology to convert tabular data into enriched text. Applied PCA for input optimisation.
 
 OPEN SOURCE PROJECTS:
-1. Antigravity Studio: Autonomous Self-Correcting UI Designer (Gemini 2.5 + Imagen 4 Ultra, real-time agent ReAct loop tracking, closed-loop evaluator, CI/CD) — Live
-2. Production-Grade Hybrid RAG System (github.com/hargurjeet/hybrid-rag) — Live
-3. AI-Powered Resume Parser (github.com/hargurjeet/resume-parser) — Live
-4. Local AI Assistant & SLM Benchmarking (github.com/hargurjeet/local_slm_experiments) — Research
-5. DuckDB Database MCP Server (github.com/hargurjeet/database-mcp) — Open Source
-6. Finance Planner (github.com/hargurjeet/Finance_Planner) — In Progress
-7. Blog Generator using Llama 2 (live)
-8. Traffic Sign Classifier (computer vision)
-9. Detecting Fake News (NLP classification)
-10. Anime Recommendation System
+1. AgenticFS: Autonomous Local File Organizer and Multi-Agent Orchestrator (github.com/hargurjeet/local_agent_organizer) — Spawns specialist subagents in parallel to organize directories.
+2. Antigravity Studio: Autonomous Self-Correcting UI Designer (Gemini 2.5 + Imagen 4 Ultra, real-time agent ReAct loop tracking, closed-loop evaluator, CI/CD) — Live
+3. Production-Grade Hybrid RAG System (github.com/hargurjeet/hybrid-rag) — Live
+4. AI-Powered Resume Parser (github.com/hargurjeet/resume-parser) — Live
+5. Local AI Assistant & SLM Benchmarking (github.com/hargurjeet/local_slm_experiments) — Research
+6. DuckDB Database MCP Server (github.com/hargurjeet/database-mcp) — Open Source
+7. Finance Planner (github.com/hargurjeet/Finance_Planner) — In Progress
+8. Blog Generator using Llama 2 (live)
+9. Traffic Sign Classifier (computer vision)
+10. Detecting Fake News (NLP classification)
+11. Anime Recommendation System
 
 COMMUNITY: Active on Stack Overflow, Jovian, PyTorch forums. Publishes on Medium: gurjeet333.medium.com.
 

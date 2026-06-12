@@ -34,10 +34,10 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-background/75 backdrop-blur-sm"
+          ? "bg-background/85 dark:bg-zinc-950/85 backdrop-blur-xl border-b border-border/80 shadow-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]"
+          : "bg-background/70 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
@@ -65,9 +65,9 @@ export default function Navbar() {
             <a
               key={label}
               href={href}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-background transition-all duration-200 font-medium group"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-background transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] font-medium group active:scale-[0.96]"
             >
-              <Icon size={13} className="group-hover:text-primary transition-colors duration-200" />
+              <Icon size={13} className="group-hover:text-primary transition-colors duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]" />
               {label}
             </a>
           ))}
@@ -79,7 +79,7 @@ export default function Navbar() {
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background hover:bg-secondary text-muted-foreground hover:text-foreground transition-all duration-200"
+            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background hover:bg-secondary text-muted-foreground hover:text-foreground transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.93] cursor-pointer"
           >
             {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
           </button>
@@ -90,7 +90,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background text-muted-foreground hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white transition-all duration-200"
+            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background text-muted-foreground hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.93]"
           >
             <LinkedInIcon size={14} />
           </a>
@@ -101,16 +101,16 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background text-muted-foreground hover:bg-foreground hover:border-foreground hover:text-background transition-all duration-200"
+            className="w-8 h-8 flex items-center justify-center rounded-full border border-border bg-background text-muted-foreground hover:bg-foreground hover:border-foreground hover:text-background transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.93]"
           >
             <GitHubIcon size={14} />
           </a>
 
           {/* Resume */}
           <a
-            href="/Hargurjeet _AI_Architect_2026.pdf"
+            href="/Hargurjeet _AIEngineer_Architect_v2.pdf"
             download
-            className="flex items-center gap-1.5 text-sm bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full transition-colors font-medium"
+            className="flex items-center gap-1.5 text-sm bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] font-medium active:scale-[0.96]"
           >
             <Download size={13} /> Resume
           </a>
