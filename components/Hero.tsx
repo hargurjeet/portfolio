@@ -19,7 +19,7 @@ const roles = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background">
       {/* Dot grid */}
       <div className="absolute inset-0 bg-[radial-gradient(oklch(0.84_0.005_285)_1px,transparent_1px)] dark:bg-[radial-gradient(oklch(1_0_0_/_8%)_1px,transparent_1px)] bg-[size:32px_32px]" />
       {/* Ambient glow — shifted left so it sits behind the text column */}

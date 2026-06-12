@@ -86,7 +86,7 @@
 
 .dark {
   /* Apple Dark Mode — #000 base, #1d1d1f cards, #f5f5f7 text, #2997ff blue */
-  --background: oklch(0 0 0);
+  --background: oklch(0.12 0.002 285);
   --foreground: oklch(0.967 0.003 285);
   --card: oklch(0.13 0.004 285);
   --card-foreground: oklch(0.967 0.003 285);
